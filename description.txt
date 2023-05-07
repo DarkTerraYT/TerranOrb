@@ -1,0 +1,10 @@
+Terran Orb add new content to the game, like weapons, acessories, armour, and ores!
+Currently this mod only adds weapons & ores in pre-hardmode but that will change later into devlopment. 
+
+I plan to add 6 pre-hardmode swords, 4 pre-hardmode staffs, 3 pre-hardmode spells, 5 pre-hardmode summouns, and 1-3 pre-hardmode bosses.
+I haven't thought about the hardmode stuff just yet but it will come later.
+
+Changelog:
+
+0.1:
+Barebones, currently only; 

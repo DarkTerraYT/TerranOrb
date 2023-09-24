@@ -10,8 +10,6 @@ namespace TerranOrb.Content.Items.Armours
     {
         public override void SetStaticDefaults() 
         {
-            DisplayName.SetDefault("Terran Headgear");
-            Tooltip.SetDefault("Increases Life+Mana Regen by 10, +1 Minion Slot");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type]= 1;
         }
        

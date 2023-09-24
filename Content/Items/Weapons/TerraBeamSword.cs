@@ -24,13 +24,11 @@ namespace TerranOrb.Content.Items.Weapons
             Item.value = Item.sellPrice(silver: 95);
             Item.UseSound = SoundID.Item8;
 
-            Item.shoot = ModContent.ProjectileType<Projectiles.Weapons.TerraBeamSwordBeam>();
+            Item.shoot = ModContent.ProjectileType<Projectiles.Weapons.TerraShine>();
             Item.shootSpeed = 3.5f;
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terra Beam Sword");
-            Tooltip.SetDefault("Return Them to The Earth!");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

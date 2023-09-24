@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using TerranOrb.Content.Items.Placeables;
 
 namespace TerranOrb.Content.Items.Armours
 {
@@ -10,8 +11,6 @@ namespace TerranOrb.Content.Items.Armours
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Reinforced Speedster Hat");
-            Tooltip.SetDefault("Increases Movement Speed by 33%");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -20,7 +19,7 @@ namespace TerranOrb.Content.Items.Armours
             Item.width= 20;
             Item.height= 18;
 
-            Item.value = Item.sellPrice(silver: 20);
+            Item.value = Item.sellPrice(gold:5);
             Item.defense = 4;
         }
 
@@ -43,8 +42,8 @@ namespace TerranOrb.Content.Items.Armours
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.WoodHelmet, 1)
-                .AddIngredient(ItemID.Vine, 10)
+                .AddIngredient(ModContent.ItemType<SpeedsterHat>(), 1)
+                .AddIngredient(ModContent.ItemType<OsmiumBar>(), 5)
                 .AddTile(TileID.WorkBenches)
                 .Register();
         }

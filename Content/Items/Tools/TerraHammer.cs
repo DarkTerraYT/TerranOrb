@@ -9,7 +9,6 @@ namespace TerranOrb.Content.Items.Tools
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Don't Hit it Too Hard, it Might Shatter!");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -34,7 +33,7 @@ namespace TerranOrb.Content.Items.Tools
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(RecipeGroupID.Wood, 4)
+                .AddRecipeGroup(RecipeGroupID.Wood, 4)
                 .AddIngredient(ModContent.ItemType<TerraShard>(), 8)
                 .AddTile(TileID.Anvils)
                 .Register();

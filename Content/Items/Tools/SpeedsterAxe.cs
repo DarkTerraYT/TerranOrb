@@ -5,7 +5,7 @@ using Terraria.ID;
 
 namespace TerranOrb.Content.Items.Tools
 {
-    internal class TerraAxe : ModItem
+    internal class SpeedsterAxe : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -19,13 +19,13 @@ namespace TerranOrb.Content.Items.Tools
 
             Item.autoReuse= true;
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.useTime = 9;
-            Item.useAnimation = 9;
+            Item.useTime = 3;
+            Item.useAnimation = 3;
 
             Item.DamageType = DamageClass.Melee;
             Item.damage = 6;
             Item.knockBack = 3;
-            Item.axe = 85/5;
+            Item.axe = 45/5;
 
             Item.value = Item.sellPrice(gold: 1, silver: 10);
             Item.UseSound = SoundID.Item1;
@@ -33,8 +33,9 @@ namespace TerranOrb.Content.Items.Tools
         public override void AddRecipes()
         {
             CreateRecipe()
+                .AddRecipeGroup(RecipeGroupID.IronBar, 8)
                 .AddRecipeGroup(RecipeGroupID.Wood, 4)
-                .AddIngredient(ModContent.ItemType<TerraShard>(), 8)
+                .AddIngredient(ItemID.Cactus, 12)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

@@ -26,8 +26,6 @@ namespace TerranOrb.Content.Items.Weapons
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terra Longsword");
-            Tooltip.SetDefault("Return Them to The Earth!");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

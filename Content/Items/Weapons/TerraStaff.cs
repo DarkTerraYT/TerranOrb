@@ -10,8 +10,6 @@ namespace TerranOrb.Content.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terra Staff");
-            Tooltip.SetDefault("Harness The Power of Terra");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

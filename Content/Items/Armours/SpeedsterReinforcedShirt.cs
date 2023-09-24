@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
+using TerranOrb.Content.Items.Placeables;
 
 namespace TerranOrb.Content.Items.Armours
 {
@@ -10,8 +11,6 @@ namespace TerranOrb.Content.Items.Armours
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Reinforced Speedster Shirt");
-            Tooltip.SetDefault("Increases Movement Speed by 34%");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -20,7 +19,7 @@ namespace TerranOrb.Content.Items.Armours
             Item.width= 30;
             Item.height= 22;
 
-            Item.value = Item.sellPrice(silver: 25);
+            Item.value = Item.sellPrice(gold:8);
             Item.defense = 5;
         }
 
@@ -33,7 +32,7 @@ namespace TerranOrb.Content.Items.Armours
         {
             CreateRecipe()
                 .AddIngredient(ItemID.WoodBreastplate, 1)
-                .AddIngredient(ItemID.Vine, 15)
+                .AddIngredient(ModContent.ItemType<OsmiumBar>(), 10)
                 .AddTile(TileID.WorkBenches)
                 .Register();
         }

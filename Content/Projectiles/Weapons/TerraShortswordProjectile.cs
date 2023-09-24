@@ -24,7 +24,7 @@ namespace TerranOrb.Content.Projectiles.Weapons
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terra Shortsword");
+
         }
 
         public override void SetDefaults()

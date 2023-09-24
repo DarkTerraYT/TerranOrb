@@ -32,8 +32,6 @@ namespace TerranOrb.Content.Items.Weapons
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terra Shortsword");
-            Tooltip.SetDefault("Return Them to The Earth!");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
         public override void AddRecipes()

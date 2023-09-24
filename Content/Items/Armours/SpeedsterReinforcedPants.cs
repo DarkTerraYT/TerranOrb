@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using TerranOrb.Content.Items.Placeables;
 
 namespace TerranOrb.Content.Items.Armours
 {
@@ -10,7 +11,6 @@ namespace TerranOrb.Content.Items.Armours
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Increases Movement Speed by 33%");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
         public override void SetDefaults()
@@ -18,7 +18,7 @@ namespace TerranOrb.Content.Items.Armours
             Item.width= 22;
             Item.height= 18;
 
-            Item.value = Item.sellPrice(silver: 20);
+            Item.value = Item.sellPrice(gold:5,silver:60);
             Item.defense = 4;
         }
         public override void UpdateEquip(Player player)
@@ -28,8 +28,8 @@ namespace TerranOrb.Content.Items.Armours
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.WoodBreastplate, 1)
-                .AddIngredient(ItemID.Vine, 10)
+                .AddIngredient(ModContent.ItemType<SpeedsterPants>(), 1)
+                .AddIngredient(ModContent.ItemType<OsmiumBar>(), 7)
                 .AddTile(TileID.WorkBenches)
                 .Register();
         }

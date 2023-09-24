@@ -1,0 +1,188 @@
+Mods: {
+	TerranOrb: {
+		Items: {
+			SpeedCore: {
+				DisplayName: Speed Core
+				Tooltip: Does Nothing, Maybe a Specialist can Make it Useful?
+			}
+
+			SpeedAmulet: {
+				DisplayName: Speed Amulet
+				Tooltip: Increases Total Attack Speed by 25%.n/Increases Movement Speed by 20%
+			}
+
+			SpeedArtifact: {
+				DisplayName: Speed Artifact
+				Tooltip: Increases Total Attack Speed by 40%.n/Increases Movement Speed by 50%
+			}
+
+			SpeedsterHat: {
+				DisplayName: Speedster Hat
+				Tooltip: Increases Movement Speed by 33%
+			}
+
+			SpeedsterPants: {
+				DisplayName: Speedster Pants
+				Tooltip: Increases Movement Speed by 33%
+			}
+
+			SpeedsterReinforcedHat: {
+				DisplayName: Reinforced Speedster Hat
+				Tooltip: Increases Movement Speed by 33%
+			}
+
+			SpeedsterReinforcedPants: {
+				DisplayName: Speedster Reinforced Pants
+				Tooltip: Increases Movement Speed by 33%
+			}
+
+			SpeedsterReinforcedShirt: {
+				DisplayName: Reinforced Speedster Shirt
+				Tooltip: Increases Movement Speed by 34%
+			}
+
+			SpeedsterShirt: {
+				DisplayName: Speedster Shirt
+				Tooltip: Increases Movement Speed by 34%
+			}
+
+			TerranBreastplate: {
+				DisplayName: Terran Chestplate
+				Tooltip: Max Life Increased by 25
+			}
+
+			TerranHelmet: {
+				DisplayName: Terran Headgear
+				Tooltip: Increases Life+Mana Regen by 10, +1 Minion Slot
+			}
+
+			TerranLeggings: {
+				DisplayName: Terran Leggings
+				Tooltip: Increases Movement Speed by 15%
+			}
+
+			OsmiumBar: {
+				DisplayName: Osmium Bar
+				Tooltip: ""
+			}
+
+			OsmiumOre: {
+				DisplayName: Osmium Ore
+				Tooltip: ""
+			}
+
+			PetrifiedTerraShard: {
+				DisplayName: Petrified Terra Shard
+				Tooltip: ""
+			}
+
+			TerraShard: {
+				DisplayName: Terra Shard
+				Tooltip: Smells like the Earth
+			}
+
+			SpeedsterAxe: {
+				DisplayName: Speedster Axe
+				Tooltip: Chop With the Speed of a Speedster
+			}
+
+			SpeedsterPickaxe: {
+				DisplayName: Speedster Pickaxe
+				Tooltip: Why not Slap the Dirt With the Speed of Sound?
+			}
+
+			TerraAxe: {
+				DisplayName: Terra Axe
+				Tooltip: Chop, Chop, Chop
+			}
+
+			TerraHammer: {
+				DisplayName: Terra Hammer
+				Tooltip: Don't Hit it Too Hard, it Might Shatter!
+			}
+
+			TerraPickaxe: {
+				DisplayName: Terra Pickaxe
+				Tooltip: It's Sharp!
+			}
+
+			TerraBeamSword: {
+				DisplayName: Terra Beam Sword
+				Tooltip: Return Them to The Earth!
+			}
+
+			TerraLongsword: {
+				DisplayName: Terra Longsword
+				Tooltip: Return Them to The Earth!
+			}
+
+			TerraShortsword: {
+				DisplayName: Terra Shortsword
+				Tooltip: Return Them to The Earth!
+			}
+
+			TerraStaff: {
+				DisplayName: Terra Staff
+				Tooltip: Harness The Power of Terra
+			}
+
+			TerraSword: {
+				DisplayName: Terra Broadsword
+				Tooltip: Return Them to The Earth!
+			}
+
+			StoneKunai: {
+				DisplayName: Stone Kunai
+				Tooltip: ""
+			}
+
+			SpeedRelic: {
+				DisplayName: Speed Relic
+				Tooltip: ""
+			}
+
+			TitaniumOsmiumBlend: {
+				DisplayName: Titanium Osmium Blend
+				Tooltip: ""
+			}
+		}
+
+		Projectiles: {
+			TerraBallProjectile.DisplayName: TerraBall
+			TerraBeamSwordBeam.DisplayName: Terra Shine
+			TerraShortswordProjectile.DisplayName: Terra Shortsword
+			StoneKunaiFriendly.DisplayName: Stone Kunai Friendly
+			TerraShine.DisplayName: Terra Shine
+		}
+
+		Tiles: {
+			OsmiumBar.MapEntry: OsmiumBar
+			OsmiumOre.MapEntry: Osmium Ore
+			TerraOre.MapEntry: Petrified Terra Shard
+			TitaniumOsmiumBlend.MapEntry: Titanium Osmium Blend
+		}
+
+		NPCs: {
+			AccessoryGuy: {
+				DisplayName: Accessory Guy
+
+				TownNPCMood: {
+					Content: I am content.
+					NoHome: I hate not having a home.
+					FarFromHome: I am too far from home.
+					LoveSpace: I love having so much space.
+					DislikeCrowded: I dislike how crowded I am.
+					HateCrowded: I hate how crowded I am.
+					LoveBiome: I love {BiomeName}.
+					LikeBiome: I like {BiomeName}.
+					DislikeBiome: I dislike {BiomeName}.
+					HateBiome: I hate {BiomeName}.
+					LoveNPC: I love {NPCName}.
+					LikeNPC: I like {NPCName}.
+					LikeNPC_Princess: I like {NPCName}.
+					Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+		}
+	}
+}

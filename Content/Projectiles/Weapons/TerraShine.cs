@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Security.Cryptography.X509Certificates;
 using TerranOrb.Content.Dusts;
 using Terraria;
 using Terraria.Audio;
@@ -7,25 +8,32 @@ using Terraria.ModLoader;
 
 namespace TerranOrb.Content.Projectiles.Weapons
 {
-    internal class TerraBeamSwordBeam : ModProjectile
+    internal class TerraShine : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("TerraBall");
+            Main.projFrames[Projectile.type] = 7;
         }
         public override void SetDefaults()
         {
             // HITBOX
-            Projectile.width = 32;
-            Projectile.height = 32;
+            Projectile.width = 30;
+            Projectile.height = 30;
 
             // COMBAT
             Projectile.friendly = true;
-            Projectile.penetrate = 5;
+            Projectile.penetrate = -1;
             Projectile.DamageType = DamageClass.Melee;
-            Projectile.timeLeft = 850;
+            Projectile.timeLeft = 140;
 
+        }
 
+        public override void AI()
+        {
+            if (Projectile.frameCounter >= 8)
+            {
+                Projectile.frameCounter = 0;
+            }
         }
     }
 }

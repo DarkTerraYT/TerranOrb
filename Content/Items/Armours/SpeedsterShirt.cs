@@ -10,7 +10,6 @@ namespace TerranOrb.Content.Items.Armours
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Increases Movement Speed by 34%");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -19,7 +18,7 @@ namespace TerranOrb.Content.Items.Armours
             Item.width= 30;
             Item.height= 22;
 
-            Item.value = Item.sellPrice(silver: 25);
+            Item.value = Item.sellPrice(gold:1);
             Item.defense = 3;
         }
 
@@ -32,7 +31,7 @@ namespace TerranOrb.Content.Items.Armours
         {
             CreateRecipe()
                 .AddIngredient(ItemID.WoodBreastplate, 1)
-                .AddIngredient(ItemID.Vine, 15)
+                .AddIngredient(ModContent.ItemType<TerraShard>(), 10)
                 .AddTile(TileID.WorkBenches)
                 .Register();
         }

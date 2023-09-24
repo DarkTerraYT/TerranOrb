@@ -8,8 +8,6 @@ namespace TerranOrb.Content.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Increases Total Attack Speed by 25%.n/" +
-                "Increases Movement Speed by 20%");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -19,7 +17,7 @@ namespace TerranOrb.Content.Items.Accessories
             Item.height=32;
 
             Item.accessory= true;
-            Item.value = Item.sellPrice(silver: 25);
+            Item.value = Item.sellPrice(silver: 20);
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

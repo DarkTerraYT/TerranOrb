@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using TerranOrb.Content.Items.Placeables;
 
 namespace TerranOrb.Content.Items
 {
@@ -10,8 +11,6 @@ namespace TerranOrb.Content.Items
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terra Shard");
-            Tooltip.SetDefault("Smells like the Earth");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
         }
 
@@ -23,6 +22,14 @@ namespace TerranOrb.Content.Items
 
             Item.value = Item.sellPrice(silver: 10);
             Item.maxStack = 9999;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<PetrifiedTerraShard>(), 1)
+                .AddTile(TileID.Hellforge)
+                .Register();
         }
     }
 }

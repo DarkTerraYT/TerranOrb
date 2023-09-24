@@ -1,12 +1,12 @@
 ﻿using TerranOrb.Content.Items.Placeables;
 using Terraria;
 using Terraria.GameContent.Creative;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace TerranOrb.Content.Items.Accessories
 {
-    internal class SpeedArtifact : ModItem
+    internal class SpeedRelic : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -19,20 +19,20 @@ namespace TerranOrb.Content.Items.Accessories
             Item.height=32;
 
             Item.accessory= true;
-            Item.value = Item.sellPrice(gold:1);
+            Item.value = Item.sellPrice(gold:15);
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetAttackSpeed(DamageClass.Melee) *= 1.4f;
-            player.moveSpeed += 0.5f;
+            player.GetAttackSpeed(DamageClass.Melee) *= 1.65f;
+            player.moveSpeed *= 2;
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<SpeedAmulet>(), 1)
-                .AddIngredient(ModContent.ItemType<OsmiumBar>(), 4)
+                .AddIngredient(ModContent.ItemType<TitaniumOsmiumBlend>(), 7)
                 .AddTile(TileID.TinkerersWorkbench)
                 .Register();
         }

@@ -10,8 +10,6 @@ namespace TerranOrb.Content.Items.Armours
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terran Chestplate");
-            Tooltip.SetDefault("Max Life Increased by 25");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

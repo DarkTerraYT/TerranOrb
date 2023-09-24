@@ -11,13 +11,12 @@ namespace TerranOrb.Content.Projectiles.Weapons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("TerraBall");
         }
         public override void SetDefaults()
         {
             // HITBOX
-            Projectile.width = 32;
-            Projectile.height = 32;
+            Projectile.width = 40;
+            Projectile.height = 40;
 
             // COMBAT
             Projectile.friendly = true;
@@ -30,7 +29,6 @@ namespace TerranOrb.Content.Projectiles.Weapons
         public override void AI()
         {
             Projectile.velocity.Y += Projectile.ai[0];
-            Lighting.AddLight(Projectile.Center, 0.43137254902f, 0.74509803921f, 0.1294117647f);
             if (Main.rand.NextBool(3))
             {
                 Dust.NewDust(Projectile.position + Projectile.velocity, Projectile.width, Projectile.height, ModContent.DustType<TerraDust>(), Projectile.velocity.X * 0.5f, Projectile.velocity.Y * 0.5f);

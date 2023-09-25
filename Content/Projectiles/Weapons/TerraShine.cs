@@ -30,9 +30,27 @@ namespace TerranOrb.Content.Projectiles.Weapons
 
         public override void AI()
         {
-            if (Projectile.frameCounter >= 8)
+            Projectile.rotation += 10;
+            if (Projectile.velocity.X < 25f)
+            {
+                Projectile.velocity.X *= 1.01f;
+                Projectile.velocity.Y *= 1.01f;
+            }
+            else if (Projectile.velocity.X >= 25f)
+            {
+                if (Main.rand.NextBool(1))
+                {
+                    Dust.NewDust(Projectile.position + Projectile.velocity, Projectile.width, Projectile.height, ModContent.DustType<TerraDust>(), Projectile.velocity.X *= 0.75f, Projectile.velocity.Y *= 0.75f);
+                }
+                Projectile.Kill();
+            }
+            if (++Projectile.frameCounter >= 9)
             {
                 Projectile.frameCounter = 0;
+                if (++Projectile.frame >= Main.projFrames[Projectile.type])
+                {
+                    Projectile.frame = 0;
+                }
             }
         }
     }

@@ -46,11 +46,11 @@ namespace TerranOrb.Content.Projectiles.Weapons
                 Projectile.ai[0] += 0.1f;
                 if (Projectile.velocity.X != oldVelocity.X)
                 {
-                    Projectile.velocity.X = -oldVelocity.X;
+                    Projectile.velocity.X = -oldVelocity.X * 2;
                 }
                 if (Projectile.velocity.Y != oldVelocity.Y)
                 {
-                    Projectile.velocity.Y = -oldVelocity.Y;
+                    Projectile.velocity.Y = -oldVelocity.Y * 2;
                 }
                 Projectile.velocity *= 0.75f;
                 SoundEngine.PlaySound(SoundID.Item10, Projectile.position);

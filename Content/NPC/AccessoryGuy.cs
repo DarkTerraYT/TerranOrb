@@ -1,31 +1,21 @@
-﻿using Microsoft.Xna.Framework;
-using TerranOrb.Content.Items.Accessories;
-using System;
-using System.Linq;
+﻿using TerranOrb.Content.Items.Accessories;
 using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.GameContent;
 using Terraria.GameContent.Personalities;
-using Terraria.DataStructures;
 using System.Collections.Generic;
-using ReLogic.Content;
-using Terraria.ModLoader.IO;
 using TerranOrb.Content.Projectiles.Weapons;
 using TerranOrb.Content.Items.Weapons;
-using TerranOrb.Content.Items;
 
 namespace TerranOrb.Content.NPC
 {
     [AutoloadHead]
     internal class AccessoryGuy : ModNPC
     {
+        const string shopName = "AccessoryShop";
+
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[Type] = 25;
@@ -121,37 +111,36 @@ namespace TerranOrb.Content.NPC
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = "Shop";
-            button2 = "Upgrade Speed Core";
         }
 
-        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
+        public override void OnChatButtonClicked(bool firstButton, ref string shop)
         {
             if (firstButton)
             {
-                if (Main.LocalPlayer.HasItem(ModContent.ItemType<SpeedCore>()))
-                {
-                    SoundEngine.PlaySound(SoundID.Item37);
-
-                    Main.npcChatText = "Is that a Speed Core? I think I can make that useful for ya'. See I just know everything accessories!";
-
-                    int speedCoreItemIndex = Main.LocalPlayer.FindItem(ModContent.ItemType<SpeedCore>());
-                    var entitySource = NPC.GetSource_GiftOrReward();
-
-                    Main.LocalPlayer.inventory[speedCoreItemIndex].TurnToAir();
-                    Main.LocalPlayer.inventory[speedCoreItemIndex].UpdateItem(ModContent.ItemType<SpeedAmulet>());
-
-                    return;
-                }
-                shopName = "Shop";
+                shop = shopName;
             }
         }
 
+
         public override void AddShops()
         {
-            var npcShot = new NPCShop(Type)
-                .Add(new Item(ItemID.BandofRegeneration) { shopCustomPrice = Item.buyPrice(gold: 2, silver: 50) })
-                .Add(new Item(ItemID.CreativeWings), new Condition("Main.TerranOrb.PlayerHasFeatherFallingorGravitation", () => Main.LocalPlayer.HasBuff(BuffID.Featherfall | BuffID.Gravitation)));
+            var npcShop = new NPCShop(Type, shopName)
+                .Add(new Item(ModContent.ItemType<SpeedAmulet>()) { shopCustomPrice = Item.buyPrice(silver: 50) })
+                .Add(ItemID.BandofRegeneration)
+                .Add(new Item(ItemID.CreativeWings), new Condition("Main.TerranOrb.PlayerHasGravitation", () => Main.LocalPlayer.HasBuff(BuffID.Gravitation)));
+            npcShop.Register();
+        }
 
+        public override void ModifyActiveShop(string shopName, Item[] items)
+        {
+            foreach (Item item in items)
+            {
+                // Skip 'air' items and null items.
+                if (item == null || item.type == ItemID.None)
+                {
+                    continue;
+                }
+            }
         }
 
         public override string GetChat()
@@ -165,9 +154,24 @@ namespace TerranOrb.Content.NPC
                 case 1:
                     return "The speed amulet and it's upgrades go great with the speedster armor!";
                 case 2:
-                    return "Do you wanna fly? Cause I got wings, no seriously I have wings in my shop!";
+                    if (Main.LocalPlayer.HasBuff(BuffID.Gravitation))
+                    {
+                        return "Do you wanna fly? Cause I got wings, no seriously I have wings in my shop!";
+                    }
+                    else
+                    {
+                        if (Main.rand.NextBool(1, 10))
+                        {
+                            return "You should drink a gravitation potion then look in my shop";
+                        }
+                        else
+                        {
+                            return "After you accomplish certain things in this world, I can provide you with different accessories!";
+                        }
+                    }
+                    
                 default:
-                    return "This is the default case.";
+                    return "This is the default chat message, how did we get here?";
             }
         }
 

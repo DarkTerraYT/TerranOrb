@@ -25,7 +25,7 @@ namespace TerranOrb.Content.Items.Armours
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == ModContent.ItemType<SpeedsterShirt>() && legs.type == ModContent.ItemType<SpeedsterPants>();
+            return body.type == ModContent.ItemType<SpeedsterReinforcedShirt>() && legs.type == ModContent.ItemType<SpeedsterReinforcedPants>();
         }
 
         public override void UpdateArmorSet(Player player)

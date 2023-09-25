@@ -27,7 +27,7 @@ namespace TerranOrb.Content.Items
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ModContent.ItemType<PetrifiedTerraShard>(), 1)
+                .AddIngredient(ModContent.ItemType<PetrifiedTerraShard>(), 3)
                 .AddTile(TileID.Hellforge)
                 .Register();
         }

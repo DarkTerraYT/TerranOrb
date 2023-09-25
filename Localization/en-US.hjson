@@ -78,7 +78,7 @@ Mods: {
 
 			TerraShard: {
 				DisplayName: Terra Shard
-				Tooltip: Smells like the Earth
+				Tooltip: Smells like the Earth \n Made in the Hellforge with Three Petrified Terra Shards
 			}
 
 			SpeedsterAxe: {

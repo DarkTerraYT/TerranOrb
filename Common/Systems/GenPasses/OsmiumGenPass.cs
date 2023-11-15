@@ -22,7 +22,6 @@ namespace TerranOrb.Common.Systems.GenPasses
         {
             progress.Message = "Spawning Osmium Ores";
 
-            // TutorialOre
             int maxToSpawn = (int)(Main.maxTilesX * Main.maxTilesY * 6E-05);
             for (int i = 0; i < maxToSpawn; i++)
             {

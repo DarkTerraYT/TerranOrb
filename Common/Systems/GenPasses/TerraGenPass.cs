@@ -20,14 +20,12 @@ namespace TerranOrb.Common.Systems.GenPasses
 
         protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
         {
-            progress.Message = "Spawning Osmium Ores";
-
-            // TutorialOre
+            progress.Message = "Starting to Generate a Terra Ores";
             int maxToSpawn = (int)(Main.maxTilesX * Main.maxTilesY * 6E-05);
             for (int i = 0; i < maxToSpawn; i++)
             {
                 int x = WorldGen.genRand.Next(100, Main.maxTilesX - 100);
-                int y = WorldGen.genRand.Next((int)GenVars.worldSurface, Main.maxTilesY - 900);
+                int y = WorldGen.genRand.Next((int)GenVars.worldSurface, Main.maxTilesY - 300);
 
                 WorldGen.TileRunner(x, y, WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 5), ModContent.TileType<TerraOre>());
             }

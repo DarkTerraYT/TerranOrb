@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using TerranOrb.Content.Projectiles.Weapons;
 using TerranOrb.Content.Items.Weapons;
 
-namespace TerranOrb.Content.NPC
+namespace TerranOrb.Content.NPCs.Town
 {
     [AutoloadHead]
     internal class AccessoryGuy : ModNPC
@@ -21,11 +21,11 @@ namespace TerranOrb.Content.NPC
             Main.npcFrameCount[Type] = 25;
 
 
-            NPCID.Sets.ExtraFramesCount[Type] = 9; 
+            NPCID.Sets.ExtraFramesCount[Type] = 9;
             NPCID.Sets.AttackFrameCount[Type] = 4;
-            NPCID.Sets.DangerDetectRange[Type] = 400; 
+            NPCID.Sets.DangerDetectRange[Type] = 400;
             NPCID.Sets.AttackType[Type] = 0;
-            NPCID.Sets.AttackTime[Type] = 90; 
+            NPCID.Sets.AttackTime[Type] = 90;
             NPCID.Sets.AttackAverageChance[Type] = 50;
             NPCID.Sets.HatOffsetY[Type] = 4;
             NPCID.Sets.ShimmerTownTransform[NPC.type] = false;
@@ -33,7 +33,7 @@ namespace TerranOrb.Content.NPC
             NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
             {
                 Velocity = 1f,
-                Direction = 1        
+                Direction = 1
             };
 
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifiers);
@@ -72,10 +72,10 @@ namespace TerranOrb.Content.NPC
         {
 
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
-				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
 
 
-				new FlavorTextBestiaryInfoElement("Coming from a designer past, he'll be sure to make you some accessories!"),
+                new FlavorTextBestiaryInfoElement("Coming from a designer past, he'll be sure to make you some accessories!"),
             });
         }
         public override bool CanTownNPCSpawn(int numTownNPCs)
@@ -145,7 +145,7 @@ namespace TerranOrb.Content.NPC
 
         public override string GetChat()
         {
-           
+
 
             switch (Main.rand.Next(3))
             {
@@ -169,7 +169,7 @@ namespace TerranOrb.Content.NPC
                             return "After you accomplish certain things in this world, I can provide you with different accessories!";
                         }
                     }
-                    
+
                 default:
                     return "This is the default chat message, how did we get here?";
             }

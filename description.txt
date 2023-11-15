@@ -1,10 +1,12 @@
-Terran Orb add new content to the game, like weapons, acessories, armour, and ores!
+Terran Orb add new content to the game, like weapons, acessories, armor, and ores!
 Currently this mod only adds weapons & ores in pre-hardmode but that will change later into devlopment. 
 
-I plan to add 6 pre-hardmode swords, 4 pre-hardmode staffs, 3 pre-hardmode spells, 5 pre-hardmode summouns, and 1-3 pre-hardmode bosses.
+I plan to add 6 pre-hardmode swords, 4 pre-hardmode staffs, 3 pre-hardmode spells, 3 pre-hardmode summons, 2 pre-hardmode NPCs and 1-3 pre-hardmode bosses.
 I haven't thought about the hardmode stuff just yet but it will come later.
+
+Terrismic Press does not count as any type of anvil!
 
 Changelog:
 
 0.1:
-Barebones, currently only; 
+Added 4 of 6 pre-hardmode swords, 1 of 3 pre-hardmode summons, 1 of 2 pre-hardmode NPCs, and 1 of 4 pre-hardmode staffs

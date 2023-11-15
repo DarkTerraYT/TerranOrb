@@ -10,7 +10,7 @@ namespace TerranOrb.Content.Items.Placeables
     {
         public override void SetStaticDefaults()
         {
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
+            Item.ResearchUnlockCount = 100;
         }
 
         public override void SetDefaults()

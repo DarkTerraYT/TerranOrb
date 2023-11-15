@@ -44,7 +44,7 @@ namespace TerranOrb.Content.Projectiles.Weapons
                 }
                 Projectile.Kill();
             }
-            if (++Projectile.frameCounter >= 9)
+            if (++Projectile.frameCounter >= 8)
             {
                 Projectile.frameCounter = 0;
                 if (++Projectile.frame >= Main.projFrames[Projectile.type])

@@ -1,74 +1,99 @@
 Mods: {
 	TerranOrb: {
-		Items: {
-			SpeedCore: {
-				DisplayName: Speed Core
-				Tooltip: Does Nothing, Maybe a Specialist can Make it Useful?
-			}
+		Tiles: {
+			OsmiumOre.MapEntry: Osmium Ore
+			TerraOre.MapEntry: Terra Ore
+			TitaniumOsmiumBlend.MapEntry: Titanium Osmium Blend
+		}
 
+		Buffs: {
+			TerraOrbMinionBuff: {
+				DisplayName: Terra Orb Minion Buff
+				Description: A Terra Orb is Fighting for you!
+			}
+		}
+
+		Items: {
 			SpeedAmulet: {
 				DisplayName: Speed Amulet
-				Tooltip: Increases Total Attack Speed by 25%.n/Increases Movement Speed by 20%
+				Tooltip:
+					'''
+					+25% Melee Speed 
+					 +20% Movement Speed
+					'''
 			}
 
 			SpeedArtifact: {
 				DisplayName: Speed Artifact
-				Tooltip: Increases Total Attack Speed by 40%.n/Increases Movement Speed by 50%
+				Tooltip:
+					'''
+					+40% Melee Speed 
+					 +50% Movement Speed
+					'''
+			}
+
+			SpeedRelic: {
+				DisplayName: Speed Relic
+				Tooltip:
+					'''
+					+65% Melee Speed 
+					 2x Movement Speed
+					'''
 			}
 
 			SpeedsterHat: {
 				DisplayName: Speedster Hat
-				Tooltip: Increases Movement Speed by 33%
+				Tooltip: +33% Movement Speed
 			}
 
 			SpeedsterPants: {
 				DisplayName: Speedster Pants
-				Tooltip: Increases Movement Speed by 33%
+				Tooltip: +33% Movement Speed
 			}
 
 			SpeedsterReinforcedHat: {
-				DisplayName: Reinforced Speedster Hat
-				Tooltip: Increases Movement Speed by 33%
+				DisplayName: Speedster Reinforced Hat
+				Tooltip: +33% Movement Speed
 			}
 
 			SpeedsterReinforcedPants: {
 				DisplayName: Speedster Reinforced Pants
-				Tooltip: Increases Movement Speed by 33%
+				Tooltip: +33% Movement Speed
 			}
 
 			SpeedsterReinforcedShirt: {
-				DisplayName: Reinforced Speedster Shirt
-				Tooltip: Increases Movement Speed by 34%
+				DisplayName: Speedster Reinforced Shirt
+				Tooltip: +33% Movement Speed
 			}
 
 			SpeedsterShirt: {
 				DisplayName: Speedster Shirt
-				Tooltip: Increases Movement Speed by 34%
+				Tooltip: +33% Movement Speed
 			}
 
 			TerranBreastplate: {
-				DisplayName: Terran Chestplate
-				Tooltip: Max Life Increased by 25
+				DisplayName: Terran Breastplate
+				Tooltip: +25 Max Life
 			}
 
 			TerranHelmet: {
-				DisplayName: Terran Headgear
-				Tooltip: Increases Life+Mana Regen by 10, +1 Minion Slot
+				DisplayName: Terran Helmet
+				Tooltip: +1 Minion Slot
 			}
 
 			TerranLeggings: {
 				DisplayName: Terran Leggings
-				Tooltip: Increases Movement Speed by 15%
+				Tooltip: 15% Increased Movement Speed
 			}
 
 			OsmiumBar: {
 				DisplayName: Osmium Bar
-				Tooltip: ""
+				Tooltip: Glistening in the light.
 			}
 
 			OsmiumOre: {
 				DisplayName: Osmium Ore
-				Tooltip: ""
+				Tooltip: It's Shiny!
 			}
 
 			PetrifiedTerraShard: {
@@ -76,59 +101,49 @@ Mods: {
 				Tooltip: ""
 			}
 
+			TitaniumOsmiumBlend: {
+				DisplayName: Titanium Osmium Blend
+				Tooltip: ""
+			}
+
+			SpeedCore: {
+				DisplayName: Speed Core
+				Tooltip: ""
+			}
+
+			TerraOrbBait: {
+				DisplayName: Terra Orb Bait
+				Tooltip: ""
+			}
+
 			TerraShard: {
 				DisplayName: Terra Shard
-				Tooltip: Smells like the Earth \n Made in the Hellforge with Three Petrified Terra Shards
+				Tooltip: ""
 			}
 
 			SpeedsterAxe: {
 				DisplayName: Speedster Axe
-				Tooltip: Chop With the Speed of a Speedster
+				Tooltip: ""
 			}
 
 			SpeedsterPickaxe: {
 				DisplayName: Speedster Pickaxe
-				Tooltip: Why not Slap the Dirt With the Speed of Sound?
+				Tooltip: ""
 			}
 
 			TerraAxe: {
 				DisplayName: Terra Axe
-				Tooltip: Chop, Chop, Chop
+				Tooltip: ""
 			}
 
 			TerraHammer: {
 				DisplayName: Terra Hammer
-				Tooltip: Don't Hit it Too Hard, it Might Shatter!
+				Tooltip: ""
 			}
 
 			TerraPickaxe: {
 				DisplayName: Terra Pickaxe
-				Tooltip: It's Sharp!
-			}
-
-			TerraBeamSword: {
-				DisplayName: Terra Beam Sword
-				Tooltip: Return Them to The Earth!
-			}
-
-			TerraLongsword: {
-				DisplayName: Terra Longsword
-				Tooltip: Return Them to The Earth!
-			}
-
-			TerraShortsword: {
-				DisplayName: Terra Shortsword
-				Tooltip: Return Them to The Earth!
-			}
-
-			TerraStaff: {
-				DisplayName: Terra Staff
-				Tooltip: Harness The Power of Terra
-			}
-
-			TerraSword: {
-				DisplayName: Terra Broadsword
-				Tooltip: Return Them to The Earth!
+				Tooltip: ""
 			}
 
 			StoneKunai: {
@@ -136,30 +151,59 @@ Mods: {
 				Tooltip: ""
 			}
 
-			SpeedRelic: {
-				DisplayName: Speed Relic
+			TerraBeamSword: {
+				DisplayName: Terra Beam Sword
 				Tooltip: ""
 			}
 
-			TitaniumOsmiumBlend: {
-				DisplayName: Titanium Osmium Blend
+			TerraLongsword: {
+				DisplayName: Terra Longsword
 				Tooltip: ""
 			}
-		}
 
-		Projectiles: {
-			TerraBallProjectile.DisplayName: TerraBall
-			TerraBeamSwordBeam.DisplayName: Terra Shine
-			TerraShortswordProjectile.DisplayName: Terra Shortsword
-			StoneKunaiFriendly.DisplayName: Stone Kunai Friendly
-			TerraShine.DisplayName: Terra Shine
-		}
+			TerraShortsword: {
+				DisplayName: Terra Shortsword
+				Tooltip: ""
+			}
 
-		Tiles: {
-			OsmiumBar.MapEntry: OsmiumBar
-			OsmiumOre.MapEntry: Osmium Ore
-			TerraOre.MapEntry: Petrified Terra Shard
-			TitaniumOsmiumBlend.MapEntry: Titanium Osmium Blend
+			TerraStaff: {
+				DisplayName: Terra Staff
+				Tooltip: ""
+			}
+
+			TerraSword: {
+				DisplayName: Terra Sword
+				Tooltip: ""
+			}
+
+			RageEmblem: {
+				DisplayName: Rage Emblem
+				Tooltip: Increases Damage by 20%
+			}
+
+			ActivatedTerraShard: {
+				DisplayName: Activated Terra Shard
+				Tooltip: Dropped From a Mysterious Terra Creature
+			}
+
+			TerrasliceTreasureBag: {
+				DisplayName: Terraslice Treasure Bag
+				Tooltip:
+					'''
+					Dropped From Terraslicer in Expert+ 
+					 Right-Click to Open
+					'''
+			}
+
+			TerrasliceRelic: {
+				DisplayName: Terraslice Relic
+				Tooltip: ""
+			}
+
+			BaseTreasureBag: {
+				DisplayName: Base Treasure Bag
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -167,20 +211,56 @@ Mods: {
 				DisplayName: Accessory Guy
 
 				TownNPCMood: {
-					Content: I am content.
-					NoHome: I hate not having a home.
-					FarFromHome: I am too far from home.
-					LoveSpace: I love having so much space.
-					DislikeCrowded: I dislike how crowded I am.
-					HateCrowded: I hate how crowded I am.
-					LoveBiome: I love {BiomeName}.
-					LikeBiome: I like {BiomeName}.
+					Content: Me? I'm fine.
+					NoHome: I need a space for my machines.
+					FarFromHome: Where am I?
+					LoveSpace: There's plenty of space for me and my machines!
+					DislikeCrowded: People keep getting in the way of my work.
+					HateCrowded: With all of these people I can barely fit all of my stuff!
+					LoveBiome: I love {BiomeName}, it's nice and quiet and perfect for my work.
+					LikeBiome: I think {BiomeName} is nice.
 					DislikeBiome: I dislike {BiomeName}.
-					HateBiome: I hate {BiomeName}.
-					LoveNPC: I love {NPCName}.
+					HateBiome: This biome sucks.
+					LoveNPC: Hey! {NPCName} makes me feel tingly inside when I think of them. Do you know why?
 					LikeNPC: I like {NPCName}.
 					LikeNPC_Princess: I like {NPCName}.
 					Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
+			TerrasliceBody.DisplayName: Terraslicer
+		}
+
+		Projectiles: {
+			TerraOrbMinion.DisplayName: Terra Orb Minion
+			StoneKunaiFriendly.DisplayName: Stone Kunai Friendly
+			TerraBallProjectile.DisplayName: Terra Ball Projectile
+			TerraShine.DisplayName: Terra Shine
+			TerraShortswordProjectile.DisplayName: Terra Shortsword Projectile
+		}
+
+		Biomes: {
+			TerraBloomBiome: {
+				DisplayName: Terra Bloom Biome
+				TownNPCDialogueName: the Terra Bloom Biome
+			}
+		}
+
+		Configs: {
+			ServerSideConfig.DisplayName: Server Side Config
+
+			TerraOrbServerSideConfig: {
+				DisplayName: Terra Orb Server Side Config
+				Headers.Ores: Ores Header
+
+				OsmiumOreWeight: {
+					Label: Osmium Ore Weight
+					Tooltip: ""
+				}
+
+				TerraOreWeight: {
+					Label: Terra Ore Weight
+					Tooltip: ""
 				}
 			}
 		}

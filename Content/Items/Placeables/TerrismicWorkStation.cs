@@ -11,7 +11,7 @@ using TerranOrb.Content.Tiles;
 
 namespace TerranOrb.Content.Items.Placeables
 {
-    internal class TerrismicPress : ModItem
+    internal class TerrismicWorkStation : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -23,6 +23,9 @@ namespace TerranOrb.Content.Items.Placeables
             Item.width = 64;
             Item.height = 52;
 
+            Item.useTime = 5;
+            Item.useAnimation = 5;
+
             Item.useStyle = ItemUseStyleID.Swing;
 
             Item.autoReuse = true;
@@ -33,7 +36,7 @@ namespace TerranOrb.Content.Items.Placeables
 
             Item.value = Item.sellPrice(gold: 1, silver: 50);
 
-            Item.createTile = ModContent.TileType<TerrismicPressTile>();
+            Item.createTile = ModContent.TileType<TerrismicWorkStationTile>();
         }
 
         public override void AddRecipes()

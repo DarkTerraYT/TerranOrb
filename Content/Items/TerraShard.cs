@@ -22,6 +22,8 @@ namespace TerranOrb.Content.Items
 
             Item.value = Item.sellPrice(silver: 10);
             Item.maxStack = 9999;
+
+            Item.rare = ItemRarityID.Green;
         }
 
         public override void AddRecipes()
@@ -37,7 +39,7 @@ namespace TerranOrb.Content.Items
 
         public override void SetStaticDefaults()
         {
-            Item.ResearchUnlockCount = 100;
+            Item.ResearchUnlockCount = 25;
         }
 
         public override void SetDefaults()
@@ -48,6 +50,8 @@ namespace TerranOrb.Content.Items
 
             Item.value = Item.sellPrice(silver: 50);
             Item.maxStack = 9999;
+
+            Item.rare = ItemRarityID.Orange;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using TerranOrb.Content.Buffs;
 using TerranOrb.Content.Items;
 using TerranOrb.Content.Items.Consumable;
 using Terraria;
@@ -20,6 +21,11 @@ namespace TerranOrb.Content.NPCs.Boss.Terraslice
 
         public bool Phase2 = false;
         public bool HasDonePhaseSwitch = false;
+
+        int rotationsAroundPlayer = 0;
+        int dashesToPlayer = 0;
+        int maxRotationsAroundPlayer = 5;
+        int maxDashesToPlayer = 3;
 
         public override void Load()
         {
@@ -61,7 +67,7 @@ namespace TerranOrb.Content.NPCs.Boss.Terraslice
             NPC.height = 144;
             NPC.damage = 25;
             NPC.defense = 25;
-            NPC.lifeMax = 15000;
+            NPC.lifeMax = 7000;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0f;
@@ -70,7 +76,8 @@ namespace TerranOrb.Content.NPCs.Boss.Terraslice
             NPC.value = Item.buyPrice(gold: 15);
             NPC.boss = true;
             NPC.npcSlots = 10f;
-            NPC.aiStyle = -1;
+            NPC.aiStyle = NPCAIStyleID.DungeonSpirit;
+
 
             if (!Main.dedServ)
             {
@@ -166,6 +173,13 @@ namespace TerranOrb.Content.NPCs.Boss.Terraslice
 
         public override void AI()
         {
+            int players = Main.PlayerList.Count;
+            int deadPlayers = 0;
+
+            int ticks = 0;
+
+            ticks++;
+
             if (NPC.life <= NPC.lifeMax / 2 && !HasDonePhaseSwitch)
             {
                 PhaseSwitch();
@@ -179,23 +193,43 @@ namespace TerranOrb.Content.NPCs.Boss.Terraslice
                 {
                     AIPhase1(Main.LocalPlayer);
                 }
+
+                NPC.AddBuff(BuffID.Swiftness, 999999999);
+                if (ticks >= 60)
+                {
+                    NPC.AddBuff(ModContent.BuffType<TerrasliceDamageBuff>(), 999999999);
+                    ticks = 0;
+                }
             }
             else
             {
                 AIPhase1(Main.LocalPlayer);
+
+                NPC.stepSpeed = 15;
             }
+
+            foreach(var player in Main.PlayerList)
+            {
+                if (player.Player.dead)
+                {
+                    deadPlayers++;
+                }
+            }
+
+            if(deadPlayers == players)
+            {
+                NPC.EncourageDespawn(1);
+            }
+
         }
 
-        void AIPhase1(Player player, int maxRotationsAroundPlayer = 5, int maxDashesToPlayer = 3)
+        void AIPhase1(Player player)
         {
             Vector2 place1;
             Vector2 place2;
             Vector2 place3;
 
             Vector2 dashLocation;
-
-            int rotationsAroundPlayer = 0;
-            int dashesToPlayer = 0;
 
             place1.X = player.Center.X - 50;
             place1.Y = player.Center.Y;

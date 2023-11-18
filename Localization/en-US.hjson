@@ -4,12 +4,33 @@ Mods: {
 			OsmiumOre.MapEntry: Osmium Ore
 			TerraOre.MapEntry: Terra Ore
 			TitaniumOsmiumBlend.MapEntry: Titanium Osmium Blend
+			TerrismicPressTile.MapEntry: Terrismic Press Tile
 		}
 
 		Buffs: {
 			TerraOrbMinionBuff: {
 				DisplayName: Terra Orb Minion Buff
 				Description: A Terra Orb is Fighting for you!
+			}
+
+			MoreMaxManaBuff: {
+				DisplayName: More Max Mana Buff
+				Description: Mods.TerranOrb.Buffs.MoreMaxManaBuff.Description
+			}
+
+			MaxManaBuff: {
+				DisplayName: Max Mana Buff
+				Description: Mods.TerranOrb.Buffs.MaxManaBuff.Description
+			}
+
+			MaxManaDebuff: {
+				DisplayName: Max Mana Debuff
+				Description: Mods.TerranOrb.Buffs.MaxManaDebuff.Description
+			}
+
+			TerrasliceDamageBuff: {
+				DisplayName: Terraslice Damage Buff
+				Description: Mods.TerranOrb.Buffs.TerrasliceDamageBuff.Description
 			}
 		}
 
@@ -202,6 +223,41 @@ Mods: {
 
 			BaseTreasureBag: {
 				DisplayName: Base Treasure Bag
+				Tooltip: ""
+			}
+
+			TerrismicPress: {
+				DisplayName: Terrismic Press
+				Tooltip: Crafts Advanced Terra Items
+			}
+
+			ActivatedTerraCrystal: {
+				DisplayName: Activated Terra Crystal
+				Tooltip: ""
+			}
+
+			TerraCrystal: {
+				DisplayName: Terra Crystal
+				Tooltip: ""
+			}
+
+			ActivatedTerraCrystalHamAxe: {
+				DisplayName: Activated Terra Crystal Ham Axe
+				Tooltip: ""
+			}
+
+			ActivatedTerraCrystalPickaxe: {
+				DisplayName: Activated Terra Crystal Pickaxe
+				Tooltip: ""
+			}
+
+			TerraCrystalHamAxe: {
+				DisplayName: Terra Crystal Ham Axe
+				Tooltip: ""
+			}
+
+			TerraCrystalPickaxe: {
+				DisplayName: Terra Crystal Pickaxe
 				Tooltip: ""
 			}
 		}

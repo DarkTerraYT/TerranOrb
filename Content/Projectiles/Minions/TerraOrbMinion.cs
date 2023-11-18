@@ -39,9 +39,9 @@ namespace TerranOrb.Content.Projectiles.Minions
         }
 
         // BOOL VALUE THINGS IDK
-        public override bool? CanCutTiles() { return false; }
+        public override bool? CanCutTiles() => true;
 
-        public override bool MinionContactDamage() { return true; }
+        public override bool MinionContactDamage() => true;
 
         // AI
         public override void AI()

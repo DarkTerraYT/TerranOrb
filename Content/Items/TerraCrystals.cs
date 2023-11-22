@@ -27,14 +27,6 @@ namespace TerranOrb.Content.Items
 
             Item.maxStack = 9999;
         }
-
-        public override void AddRecipes()
-        {
-            CreateRecipe(2)
-                .AddIngredient<TerraShard>(20)
-                .AddTile<TerrismicWorkStationTile>()
-                .Register();
-        }
     }
     internal class ActivatedTerraCrystal : ModItem
     {
@@ -56,14 +48,6 @@ namespace TerranOrb.Content.Items
             Item.rare = ItemRarityID.LightPurple;
 
             Item.maxStack = 9999;
-        }
-
-        public override void AddRecipes()
-        {
-            CreateRecipe(2)
-                .AddIngredient<ActivatedTerraShard>(20)
-                .AddTile<TerrismicWorkStationTile>()
-                .Register();
         }
     }
 }

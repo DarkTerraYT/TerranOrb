@@ -19,7 +19,6 @@ namespace TerranOrb.Content.Items.Consumable
             Item.ResearchUnlockCount = 3;
 
             ItemID.Sets.BossBag[Type] = true;
-            ItemID.Sets.PreHardmodeLikeBossBag[Type] = true;
         }
 
         public override void SetDefaults()
@@ -41,7 +40,7 @@ namespace TerranOrb.Content.Items.Consumable
         {
 
 
-            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<ActivatedTerraShard>(), 1, 15, 35));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<TerraCrystal>(), 1, 23, 68));
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<RageEmblem>()));
             itemLoot.Add(ItemDropRule.CoinsBasedOnNPCValue(ModContent.NPCType<TerrasliceBody>()));
         }

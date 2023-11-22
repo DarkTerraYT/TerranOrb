@@ -260,6 +260,55 @@ Mods: {
 				DisplayName: Terra Crystal Pickaxe
 				Tooltip: ""
 			}
+
+			TerrismicWorkStation: {
+				DisplayName: Terrismic Work Station
+				Tooltip: ""
+			}
+
+			ActivatedCrystalTerranBreastplate: {
+				DisplayName: Activated Crystal Terran Breastplate
+				Tooltip: ""
+			}
+
+			ActivatedCrystalTerranHelmet: {
+				DisplayName: Activated Crystal Terran Helmet
+				Tooltip: ""
+			}
+
+			ActivatedCrystalTerranLeggings: {
+				DisplayName: Activated Crystal Terran Leggings
+				Tooltip: ""
+			}
+
+			CrystalTerranBreastplate: {
+				DisplayName: Crystal Terran Breastplate
+				Tooltip: ""
+			}
+
+			CrystalTerranHelmet: {
+				DisplayName: Crystal Terran Helmet
+				Tooltip: ""
+			}
+
+			CrystalTerranLeggings: {
+				DisplayName: Crystal Terran Leggings
+				Tooltip: ""
+			}
+
+			TerraGem: {
+				DisplayName: Terra Gem
+				Tooltip: 
+				'''
+				Spawns Terraslice
+
+				Not Consumable
+				'''
+			}
+			SharpnessTalisman: {
+				DisplayName: Sharpness Talisman
+				Tooltip: "Increases Damage by 5%"
+			}
 		}
 
 		NPCs: {

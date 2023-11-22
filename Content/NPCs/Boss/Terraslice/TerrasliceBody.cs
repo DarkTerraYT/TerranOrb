@@ -65,15 +65,15 @@ namespace TerranOrb.Content.NPCs.Boss.Terraslice
         {
             NPC.width = 144;
             NPC.height = 144;
-            NPC.damage = 25;
-            NPC.defense = 25;
-            NPC.lifeMax = 7000;
+            NPC.damage = 85;
+            NPC.defense = 35;
+            NPC.lifeMax = 20000;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0f;
             NPC.noGravity = true;
             NPC.noTileCollide = true;
-            NPC.value = Item.buyPrice(gold: 15);
+            NPC.value = Item.buyPrice(gold: 55);
             NPC.boss = true;
             NPC.npcSlots = 10f;
             NPC.aiStyle = NPCAIStyleID.DungeonSpirit;
@@ -96,7 +96,7 @@ namespace TerranOrb.Content.NPCs.Boss.Terraslice
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<TerrasliceTreasureBag>()));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ActivatedTerraShard>(), 1, 10, 25));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TerraCrystal>(), 1, 15, 40));
         }
 
         public override void BossLoot(ref string name, ref int potionType)

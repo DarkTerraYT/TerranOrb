@@ -14,9 +14,7 @@ namespace TerranOrb.Common.Systems.GenPasses
 {
     internal class TerraGenPass : GenPass
     {
-        public TerraGenPass(string name, double loadWeight) : base(name, loadWeight)
-        {
-        }
+        public TerraGenPass(string name, double loadWeight) : base(name, loadWeight) { }
 
         protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
         {

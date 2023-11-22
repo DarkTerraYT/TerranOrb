@@ -1,10 +1,14 @@
-﻿using Terraria.GameContent.Creative;
-using Terraria;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Terraria.ModLoader;
+using Terraria;
 
 namespace TerranOrb.Content.Items.Accessories
 {
-    internal class RageEmblem : ModItem
+    internal class SharpnessTalisman : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -17,13 +21,12 @@ namespace TerranOrb.Content.Items.Accessories
             Item.height = 32;
 
             Item.accessory = true;
-            Item.value = Item.sellPrice(silver: 225);
+            Item.value = Item.sellPrice(silver: 110);
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetDamage(DamageClass.Generic) *= 1.2f;
+            player.GetDamage(DamageClass.Generic) *= 1.05f;
         }
     }
 }
-

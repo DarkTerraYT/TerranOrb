@@ -20,8 +20,8 @@ namespace TerranOrb.Content.Items.Placeables
 
         public override void SetDefaults()
         {
-            Item.width = 64;
-            Item.height = 52;
+            Item.width = 68;
+            Item.height = 32;
 
             Item.useTime = 5;
             Item.useAnimation = 5;

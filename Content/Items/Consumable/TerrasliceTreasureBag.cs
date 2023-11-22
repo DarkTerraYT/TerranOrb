@@ -41,7 +41,7 @@ namespace TerranOrb.Content.Items.Consumable
 
 
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<TerraCrystal>(), 1, 23, 68));
-            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<RageEmblem>()));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<SharpnessTalisman>()));
             itemLoot.Add(ItemDropRule.CoinsBasedOnNPCValue(ModContent.NPCType<TerrasliceBody>()));
         }
     }
